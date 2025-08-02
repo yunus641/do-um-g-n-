@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #f7f7f7;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#container {
+    text-align: center;
+    z-index: 10;
+}
+
+h1 {
+    font-size: 3em;
+    color: #ff6347;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+p {
+    font-size: 1.2em;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* Konfeti animasyonu için temel stil */
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #ff69b4;
+    border-radius: 50%;
+    opacity: 0;
+    animation: fall linear forwards;
+}
+
+/* Konfetilerin düşüş animasyonu */
+@keyframes fall {
+    0% {
+        transform: translateY(-10vh) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(110vh) rotate(720deg);
+        opacity: 0.5;
+    }
+}
